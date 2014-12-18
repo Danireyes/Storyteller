@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<story>
+
+<displayer id="introduction">You open your eyes and see that you are on the beach in a deserted island. Now you have to think what to do to try to survive in the island.</displayer>
+
+<block id="A">
+	<descriptionText> What would it be your move? </descriptionText>
+	<optionList>
+		<option id="1" gotoBlock="B">Get into the jungle</option>
+		<option id="2" gotoLinkedResult="1">Stand still, crying and screaming for help</option>
+		<option id="3" gotoLinkedResult="2">Build a raft</option>
+	</optionList>
+	
+	<linkedResultsList>
+		<linkedResult id="1" gotoBlock="A">Loser, nobody can hear you</linkedResult>
+		<linkedResult id="2" gotoBlock="A">You still dont have any material</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="B">
+	<descriptionText>Now you are in the jungle. You are so thirsty and hungry. You can see high trees, a pond and to all sides you look at there is only jungle. So what are you doing?</descriptionText>
+	<optionList>
+		<option id="1" gotoBlock="C" >Climb a tree</option>
+		<option id="2" gotoBlock="D">Make a sharp object</option>
+		<option id="3" gotoLinkedResult="1">Drink some water from the pond</option>
+	</optionList>
+	
+	<linkedResultsList>
+		<linkedResult id="1" gotoDisplayer="death">The water is poisoned and you die after 3 seconds</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="C">
+	<descriptionText>You are up in the tree now and you have found a really tasty fruit, what solves both problems of thirst and hunger. What are you doing now?</descriptionText>
+	<optionList>
+		<option id="1" gotoLinkedResult="1">Take a nap</option>
+		<option id="2" gotoBlock="E">Climb down the tree</option>
+		<option id="3" gotoLinkedResult="2">Talk to the friendly monkey that is next to you</option>
+	</optionList>
+	
+	<linkedResultsList>
+		<linkedResult id="1" gotoDisplayer="death">You fall from the tree while you are sleeping and you die</linkedResult>
+		<linkedResult id="2" gotoDisplayer="death">The monkey is not as friendly as you thought. Hes got so angry because you have climbed his tree that he push you and you fall down and die</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="D">
+	<descriptionText>Now you have a tool and a weapon. You feel more safety with it. So what are you gonna do, brave man?</descriptionText>
+	<optionList>
+		<option id="1" gotoBlock="F">Cut wood</option>
+		<option id="2" gotoBlock="G">Keep getting deeper into the jungle</option>
+		<option id="3" gotoBlock="A">Return to the beach</option>
+	</optionList>
+</block>
+
+<block id="E">
+	<descriptionText>You are again down the tree and you have to decide your next move.</descriptionText>
+	<optionList>
+		<option id="1" gotoBlock="D">Make a sharp object</option>
+		<option id="2" gotoLinkedResult="1">Drink some water from the pond</option>
+		<option id="3" gotoBlock="A">Return to the beach</option>
+	</optionList>
+
+	<linkedResultsList>
+		<linkedResult id="1" gotoDisplayer="death">The water is poisoned and you die after 3 seconds</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="F">
+	<descriptionText>OK now you have wood. You could do interesting things with it, dont you think so?</descriptionText>
+	<optionList>
+		<option id="1" gotoBlock="I">Return to the beach</option>
+		<option id="2" gotoBlock="G">Keep getting deeper into the jungle</option>
+		<option id="3" gotoBlock="C">Climb a tree</option>
+	</optionList>
+</block>
+
+<block id="G">
+	<descriptionText>You have found a tiger! It hasnt seen you yet, but it will eventually do it, you have to do something!</descriptionText>
+	<optionList>
+		<option id="1" gotoBlock="H">Attack with your weapon</option>
+		<option id="2" gotoLinkedResult="1">Run out!</option>
+		<option id="3" gotoBlock="A">Go back stealthily to the beach&#63;</option>
+	</optionList>
+
+	<linkedResultsList>
+		<linkedResult id="1" gotoDisplayer="death">The tiger see you and run after you. As he is faster than you, he kills you</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="H">
+	<descriptionText>Wow, you have killed the tiger! Now you feel like if you were Hercules. What are you gonna do, demigod?</descriptionText>
+	<optionList>
+		<option id="1" gotoBlock="C">Climb a tree</option>
+		<option id="2" gotoBlock="F">Cut wood</option>
+		<option id="3" gotoLinkedResult="1">Make a fire and roast the tiger</option>
+	</optionList>
+
+	<linkedResultsList>
+		<linkedResult id="1" gotoDisplayer="death">The fire gets out of control, everything is in fire now and you die</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="I">
+	<descriptionText>Again at the famous beach&#63;</descriptionText>
+	<optionList>
+		<option id="1" gotoBlock="B">Get into the jungle</option>
+		<option id="2" gotoLinkedResult="1">Stand still, crying and screaming for help</option>
+		<option id="3" gotoBlock="J">Build a raft</option>
+	</optionList>
+	
+	<linkedResultsList>
+		<linkedResult id="1" gotoBlock="A">Loser, nobody can hear you</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="J">
+	<descriptionText>Now you have a raft! It can be the only possibility to return to your life!</descriptionText>
+	<optionList>
+		<option id="1" gotoBlock="K">Wait for little waves</option>
+		<option id="2" gotoLinkedResult="1">Go to the sea!</option>
+		<option id="3" gotoBlock="L">Wait for downwind</option>
+	</optionList>
+	
+	<linkedResultsList>
+		<linkedResult id="1" gotoDisplayer="death">There are so many and huge waves that your raft breaks down and you die drowned</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="K">
+	<descriptionText>Now there are pretty little waves to go the sea and try your luck&#63;</descriptionText>
+	<optionList>
+		<option id="1" gotoLinkedResult="1">Go to the sea! Its the time</option>
+		<option id="2" gotoBlock="M">Wait for downwind</option>
+		<option id="3" gotoBlock="B">Its not the time yet&#63; Go to the jungle</option>
+	</optionList>
+	
+	<linkedResultsList>
+		<linkedResult id="1" gotoDisplayer="death">There is headwind and you lose the control of the raft and die drowned</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="L">
+	<descriptionText>Now you have downwind, you could try your luck now.</descriptionText>
+	<optionList>
+		<option id="1" gotoLinkedResult="1">Go to the sea! Now its the time</option>
+		<option id="2" gotoBlock="B">Its not the time yet&#63; Go to the jungle</option>
+		<option id="3" gotoBlock="M">Wait for little waves</option>
+	</optionList>
+	
+	<linkedResultsList>
+		<linkedResult id="1" gotoDisplayer="death">There are so many and huge waves that your raft breaks down and you die drowned</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="M">
+	<descriptionText>Now it seems you wont ever have better conditions to try your luck, its the time!</descriptionText>
+	<optionList>
+		<option id="1" gotoBlock="N">Go to the sea! Now or never</option>
+		<option id="2" gotoBlock="B">Its not the time yet&#63; Go to the jungle</option>
+		<option id="3" gotoBlock="1">Stand still, crying and screaming for help</option>
+	</optionList>
+	
+	<linkedResultsList>
+		<linkedResult id="1" gotoBlock="A">Loser, nobody can hear you</linkedResult>
+	</linkedResultsList>
+</block>
+
+<block id="N">
+	<descriptionText>You have rowed for a couple of hours and you have finally found an inhabited island! You dont know these people so have to choose well your next move. They might be friendly, or maybe they need a strong shout...</descriptionText>
+	<optionList>
+		<option id="3" gotoLinkedResult="3">Require help scolding them</option>
+		<option id="2" gotoLinkedResult="2">Attack them! They need to know who is in charge</option>
+		<option id="1" gotoLinkedResult="1">Ask for help</option>
+	</optionList>
+	
+	<linkedResultsList>
+		<linkedResult id="1" gotoDisplayer="victory">These people are marvellous people! They have contacted with your country and will send you back</linkedResult>
+		<linkedResult id="2" gotoDisplayer="death">They have better weapons than you so they kill you, insolent</linkedResult>
+		<linkedResult id="3" gotoDisplayer="death">As you have insulted them, they dont help you, and you become a slave. After a few years you die</linkedResult>
+	</linkedResultsList>
+</block>
+
+
+
+
+
+
+<displayer id="victory" effect="endGame">You have always chosen the best option so you have return to your home safe and sound. Congratulations!</displayer>
+<displayer id="death" effect="endGame">You are not very intelligent, are you? You have chosen the worst option you could, so now you are dead&#33; GAME OVER</displayer>
+
+</story>
